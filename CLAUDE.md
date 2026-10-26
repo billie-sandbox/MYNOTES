@@ -6,27 +6,65 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A personal Obsidian vault (Markdown notes), not a software project. There is no build, lint, or test step. Claude's role here is a note-taking assistant: drafting and editing notes, organizing structure, linking related notes, and maintaining vault config.
 
-The vault is new and nearly empty — a folder structure and note conventions have not been settled yet. When the user asks to organize or add notes, propose a structure rather than assuming one, and record agreed conventions in this file so they persist.
+The structure is adapted from kepano's vault (https://github.com/kepano/kepano-obsidian, links-first version after commit d94cc1e), plus a content-creation pipeline for video. When new conventions are agreed with the user, record them here.
+
+## Vault structure
+
+Organization comes from properties and links, not folders. Folders are flat (no subfolders except `Templates/Bases/`):
+
+- `Notes/` — the user's own writing: ideas, meetings, trips, projects, content pieces.
+- `References/` — things in the world: books, people, places, movies, companies.
+- `Clippings/` — articles by others saved from the web.
+- `Daily/` — daily notes named `YYYY-MM-DD` (created from `Templates/Daily Note Template`).
+- `Categories/` — one hub note per category; mostly just embeds its Base (`![[Books.base]]`).
+- `Templates/` — note templates; `Templates/Bases/` holds every `.base` file.
+- `Attachments/` — images and PDFs.
+
+Journal entries are created with Unique note creator (`YYYY-MM-DD HHmm`, Journal template) at the vault root.
+
+### How a note is classified
+
+- **What a note is → a link in `categories`**, e.g. `categories: ["[[Books]]"]`. The matching Base filters on `categories.contains(link("Books"))`, so a note appears in its category hub automatically. Never classify with tags.
+- **Sub-types and related things → links too**: `type: ["[[Authors]]"]`, `author`, `genre`, `topics`, `loc`, `people`, `org`. Links to notes that don't exist yet are fine and intended.
+- **Tags only for state/format**: `to-read`, `0🌲` (evergreen idea notes), `journal`, `daily`/`monthly`, `categories` (on hub notes), and nested type tags like `movies/genres`.
+- Category names are plural. Dates are `YYYY-MM-DD`. Ratings are 1–7.
+- Property types are declared in `.obsidian/types.json`; add new properties there with the right type.
+
+When creating a note, start from the matching template in `Templates/` so the properties are complete. Bases embedded with a `#View` that filters on `this` (e.g. `![[Meetings.base#Person]]` in a person note) show entries linked to the embedding note.
+
+### Content pipeline
+
+Long- and short-form video live in the `[[Content]]` category (`Categories/Content.md`, `Templates/Bases/Content.base`). Templates: `Long-form Video Template`, `Short-form Video Template` (script lives inside the content note).
+
+- `stage` is plain text with numbered values so grouping sorts in pipeline order: `1 Idea`, `2 Scripting`, `3 Filming`, `4 Editing`, `5 Scheduled`, `6 Published`. Keep these exact strings.
+- `type` is `[[Long-form video]]` or `[[Short-form video]]`; `platform` is links (`[[YouTube]]`, `[[TikTok]]`, `[[Instagram]]`); `publish` is the target/actual publish date; short-form `from` links the long video it was cut from.
+- Content.base views: Pipeline (grouped by stage), In progress, Ideas, Long-form, Short-form, Published, plus `#Topic` and `#Platform` for embedding in topic/platform notes.
+
+Left out of kepano's setup on purpose: map views (`Map.base`, needs the Maps plugin) and the `Posts` category (replaced by Content). His example notes were not copied.
 
 ## Syncing (git)
 
-The vault syncs between machines via git (see `Welcome.md`). The workflow is pull before editing, commit + push after. Only commit or push when the user asks.
+The vault syncs between machines via git, remote `origin` = https://github.com/billie-sandbox/MYNOTES.git (branch `main`). Only commit or push when the user asks.
 
 - `.gitattributes` forces LF line endings for text and marks images/PDFs as binary — keep new files LF.
 - `.gitignore` excludes per-machine Obsidian UI state (`.obsidian/workspace*.json`, cache), `.trash/`, and `.claude/settings.local.json`. Don't commit those.
+- Empty folders are kept with `.gitkeep` files.
 
 ## Obsidian settings that affect edits
 
-From `.obsidian/app.json`:
-- New notes are created at the vault **root** by default (`newFileLocation: root`).
-- Attachments (images, PDFs) go in `attachments/` — embed them with `![[filename.png]]`.
-- `alwaysUpdateLinks` is on: Obsidian rewrites wikilinks when a note is renamed *inside Obsidian*. Renames/moves done from the shell do **not** update links — when moving or renaming notes outside Obsidian, grep for `[[Old Name` and fix references, or use the Obsidian CLI.
+- New notes are created at the vault root by default; attachments go in `Attachments/` (embed with `![[filename.png]]`).
+- `alwaysUpdateLinks` is on: Obsidian rewrites wikilinks when a note is renamed *inside Obsidian*. Renames/moves done from the shell do **not** update links — use the Obsidian CLI to move/rename, or grep for `[[Old Name` and fix references.
+- Obsidian keeps its config in memory and may overwrite `.obsidian/*.json` edited on disk. After editing config files, reload the app: `obsidian eval code="app.commands.executeCommandById('app:reload')"`. `obsidian plugin:enable ... filter=core` does not persist for core plugins; use `app.internalPlugins.getPluginById('<id>').enable(true)` via `obsidian eval` instead.
 
-Enabled core plugins worth knowing (`.obsidian/core-plugins.json`): Properties (YAML frontmatter), Daily notes, Templates, Bases (`.base` database views), Canvas (`.canvas`), Backlinks, Bookmarks, Sync.
+Core plugins in use: Properties, Daily notes, Templates, Unique note creator, Bases, Canvas, Backlinks, Bookmarks, Sync.
 
 The only community plugin is **Git** (`obsidian-git`, settings in `.obsidian/plugins/obsidian-git/data.json`). Don't rely on Dataview, Templater, etc. While Obsidian is open the plugin auto commits and syncs 5 minutes after the last edit, pulls every 10 minutes, and pulls on startup. Its commits are titled `vault backup: <date>`. So:
-- Expect commits to appear on their own; check `git status`/`git log` before making manual commits.
+- Expect commits to appear on their own; check `git status`/`git log` before making manual commits. A multi-file change made through the shell may be auto-committed before a manual commit happens.
 - Plugin settings changes must be written to `data.json` and then picked up with `obsidian plugin:reload id=obsidian-git` (Obsidian overwrites `data.json` from memory otherwise).
+
+## Obsidian CLI
+
+`obsidian` is on PATH and talks to the running Obsidian app (it must be open). Useful: `obsidian vault`, `obsidian search query=...`, `obsidian create name=... template=... silent`, `obsidian open path=...`, `obsidian eval code=...`. Run `obsidian help` for the full list.
 
 ## Skills
 

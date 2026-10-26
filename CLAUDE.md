@@ -22,7 +22,11 @@ From `.obsidian/app.json`:
 - Attachments (images, PDFs) go in `attachments/` — embed them with `![[filename.png]]`.
 - `alwaysUpdateLinks` is on: Obsidian rewrites wikilinks when a note is renamed *inside Obsidian*. Renames/moves done from the shell do **not** update links — when moving or renaming notes outside Obsidian, grep for `[[Old Name` and fix references, or use the Obsidian CLI.
 
-Enabled core plugins worth knowing (`.obsidian/core-plugins.json`): Properties (YAML frontmatter), Daily notes, Templates, Bases (`.base` database views), Canvas (`.canvas`), Backlinks, Bookmarks, Sync. No community plugins are installed, so don't rely on Dataview, Templater, etc.
+Enabled core plugins worth knowing (`.obsidian/core-plugins.json`): Properties (YAML frontmatter), Daily notes, Templates, Bases (`.base` database views), Canvas (`.canvas`), Backlinks, Bookmarks, Sync.
+
+The only community plugin is **Git** (`obsidian-git`, settings in `.obsidian/plugins/obsidian-git/data.json`). Don't rely on Dataview, Templater, etc. While Obsidian is open the plugin auto commits and syncs 5 minutes after the last edit, pulls every 10 minutes, and pulls on startup. Its commits are titled `vault backup: <date>`. So:
+- Expect commits to appear on their own; check `git status`/`git log` before making manual commits.
+- Plugin settings changes must be written to `data.json` and then picked up with `obsidian plugin:reload id=obsidian-git` (Obsidian overwrites `data.json` from memory otherwise).
 
 ## Skills
 

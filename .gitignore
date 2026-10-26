@@ -1,0 +1,17 @@
+# Obsidian: per-machine UI state (changes constantly, causes merge conflicts)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspaces.json
+.obsidian/cache
+.obsidian/plugins/*/data.json.bak
+
+# Obsidian trash
+.trash/
+
+# Claude Code: per-machine settings
+.claude/settings.local.json
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini

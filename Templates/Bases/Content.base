@@ -1,0 +1,126 @@
+filters:
+  and:
+    - categories.contains(link("Content"))
+    - '!file.name.contains("Template")'
+formulas:
+  DaysToPublish: 'if(publish, (date(publish) - today()).days, "")'
+properties:
+  file.name:
+    displayName: Title
+  note.stage:
+    displayName: Stage
+  note.type:
+    displayName: Format
+  note.platform:
+    displayName: Platform
+  note.publish:
+    displayName: Publish
+  formula.DaysToPublish:
+    displayName: Days left
+views:
+  - type: table
+    name: Pipeline
+    groupBy:
+      property: note.stage
+      direction: ASC
+    order:
+      - file.name
+      - type
+      - platform
+      - publish
+      - formula.DaysToPublish
+    sort:
+      - property: publish
+        direction: ASC
+  - type: table
+    name: In progress
+    filters:
+      and:
+        - 'stage != "1 Idea"'
+        - 'stage != "6 Published"'
+    order:
+      - file.name
+      - stage
+      - type
+      - platform
+      - publish
+      - formula.DaysToPublish
+    sort:
+      - property: stage
+        direction: DESC
+      - property: publish
+        direction: ASC
+  - type: table
+    name: Ideas
+    filters:
+      and:
+        - 'stage == "1 Idea"'
+    order:
+      - file.name
+      - type
+      - topics
+      - created
+    sort:
+      - property: created
+        direction: DESC
+  - type: table
+    name: Long-form
+    filters:
+      and:
+        - list(type).contains(link("Long-form video"))
+    order:
+      - file.name
+      - stage
+      - platform
+      - publish
+    sort:
+      - property: stage
+        direction: ASC
+  - type: table
+    name: Short-form
+    filters:
+      and:
+        - list(type).contains(link("Short-form video"))
+    order:
+      - file.name
+      - stage
+      - platform
+      - from
+      - publish
+    sort:
+      - property: stage
+        direction: ASC
+  - type: table
+    name: Published
+    filters:
+      and:
+        - 'stage == "6 Published"'
+    order:
+      - file.name
+      - type
+      - platform
+      - publish
+      - url
+    sort:
+      - property: publish
+        direction: DESC
+  - type: table
+    name: Topic
+    filters:
+      and:
+        - list(topics).contains(this)
+    order:
+      - file.name
+      - stage
+      - type
+      - publish
+  - type: table
+    name: Platform
+    filters:
+      and:
+        - list(platform).contains(this)
+    order:
+      - file.name
+      - stage
+      - type
+      - publish

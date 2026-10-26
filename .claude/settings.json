@@ -1,4 +1,7 @@
 {
+  "enabledPlugins": {
+    "obsidian@obsidian-skills": true
+  },
   "extraKnownMarketplaces": {
     "obsidian-skills": {
       "source": {
@@ -6,8 +9,5 @@
         "repo": "kepano/obsidian-skills"
       }
     }
-  },
-  "enabledPlugins": {
-    "obsidian@obsidian-skills": true
   }
 }

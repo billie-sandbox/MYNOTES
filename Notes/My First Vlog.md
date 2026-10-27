@@ -125,7 +125,9 @@ PEMBAHASAN 1
 ## vlognya bisa sambil jalan ngelakuin semua itu
 
 
-**ESENSINYA HARUS VLOG -- JANGAN TERLALU **
+**ESENSINYA HARUS VLOG -- JANGAN TERLALU scripted **
+**yang ditulis disini hanya garis besar pembahasan dari videonya**
+
 hal yang pingin dilakukan:
 1. sering fotografi
 	1. tujuan karya bisa dilihat orang dan dikagumi orang

@@ -124,3 +124,16 @@ PEMBAHASAN 1
 
 ## vlognya bisa sambil jalan ngelakuin semua itu
 
+hal yang pingin dilakukan:
+1. sering fotografi
+	1. tujuan karya bisa dilihat orang dan dikagumi orang
+	2. ga tau jadi job atau enda
+2. ngelakuin content creation
+
+
+- //scene// atas pintu, jalan > follow ke aku > view kamar dari ataas pintu
+	- yee berantakan banget
+	- kek uripku kwoakwoakwok
+	- ey halo rek
+	- selamat datang kembali di channel ini
+- ambilld

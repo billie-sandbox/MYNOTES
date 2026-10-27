@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A personal Obsidian vault (Markdown notes), not a software project. There is no build, lint, or test step. Claude's role here is a note-taking assistant: drafting and editing notes, organizing structure, linking related notes, and maintaining vault config.
 
-The structure is adapted from kepano's vault (https://github.com/kepano/kepano-obsidian, links-first version after commit d94cc1e), plus a content-creation pipeline for video. When new conventions are agreed with the user, record them here.
+The structure is adapted from kepano's vault (https://github.com/kepano/kepano-obsidian, links-first version after commit d94cc1e), plus a content-creation pipeline for video. When new conventions are agreed with the user, record them here **and** update `Vault Guide.md` (the user-facing guide, bookmarked in Obsidian) so the two never disagree. This file is the source of truth for rules; the guide explains them for daily use.
 
 ## Vault structure
 

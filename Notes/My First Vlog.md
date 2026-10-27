@@ -128,6 +128,8 @@ PEMBAHASAN 1
 **ESENSINYA HARUS VLOG -- JANGAN TERLALU scripted **
 **yang ditulis disini hanya garis besar pembahasan dari videonya**
 
+**mungkin buat jadi lebih ke arah beneran vlog, isinya progress utnuk emua yang mau dilakuin**
+
 hal yang pingin dilakukan:
 1. sering fotografi
 	1. tujuan karya bisa dilihat orang dan dikagumi orang

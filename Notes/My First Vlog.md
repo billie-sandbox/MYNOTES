@@ -124,6 +124,8 @@ PEMBAHASAN 1
 
 ## vlognya bisa sambil jalan ngelakuin semua itu
 
+
+**ESENSINYA HARUS VLOG -- JANGAN TERLALU **
 hal yang pingin dilakukan:
 1. sering fotografi
 	1. tujuan karya bisa dilihat orang dan dikagumi orang
@@ -131,9 +133,13 @@ hal yang pingin dilakukan:
 2. ngelakuin content creation
 
 
+- tentang bingugn mau ngatur video yang ada
+	- bisa buat video tentang foto 
+	- berdasarkan hasil roll yang lom dicuci ini
+
 - //scene// atas pintu, jalan > follow ke aku > view kamar dari ataas pintu
 	- yee berantakan banget
 	- kek uripku kwoakwoakwok
 	- ey halo rek
 	- selamat datang kembali di channel ini
-- ambilld
+	- tenang video ini isinya bukan tentang 

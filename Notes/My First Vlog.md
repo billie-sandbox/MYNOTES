@@ -11,79 +11,116 @@ created: 2026-10-26
 publish:
 url:
 ---
-## Idea
+## intro
 
-First vlog: introduce myself and the channel, talk about the struggles I've hit, and show the process I'm trying. Bahasa Indonesia, talking-points style, ~8–15+ minutes.
+- //scene// kompilasi sepedaan sendiri (buat pendek)
+	- //title-chapter// Slow Living Vlog
+	- //scene// sepeda jarak jauh di araya view jembatan
+		- slow living ndasmu
+		- slow income yang ada
+		- //scene// lari ke arah kamera
+	- //scene// muncul (masking double actor, background masih sama yang diatas) di dekat kamera
+		- aku aja sampai jual kamera kesayanganku
+			- //scene// foto kamera untuk dijual
+			- yang awalnya tujuan buat ngeyutub
+			- tapi ya sampai sekarang g terlalu kepake
+		- nah tapi ak juga mau slow living
+		- jadi ikut dalam perjalananku buat bisa kek gitu
+		- ey halo rek, selamat datang kembali ke channel ku
+		- //title//  
+		- selamat datang kembali, ya ni channel sebenernya dah ada dari lama, dan pernah upload beberapa kali
+		- tapi videonya udah ... tahun lalu
+		- nah itu dia masalahnya
+		- aku punya masalah untuk memulai
+		- jadi sekarang ak g mau mikir mikir lagi, dah langsung mulai aja, salah satunya, memulai buat video ini.
+		- selamat datang di vlog pertamaku
 
-## Hook
 
-%% The first 15–30 seconds, written word-for-word. Give viewers a reason to stay: tease the struggle or the process, then promise what they'll get from watching. %%
+# Versi 2
 
-## Outline
+simpulan akhri dari video:
+- memanfaatkan vlog untuk membantu mengatur hidup
+	- menemukan ketika di rekam, dan ada rencana vlog, malah beneran teratur dan berjalan
 
-| #   | Segment                | Goal                                    | Length  |
-| --- | ---------------------- | --------------------------------------- | ------- |
-| 1   | Hook                   | Make them stay                          | 0:30    |
-| 2   | Who I am               | Make them know and like me              | 2–3 min |
-| 3   | About this channel     | Why subscribe: what's coming, how often | 2–3 min |
-| 4   | My struggle            | Honest, relatable story                 | 3–5 min |
-| 5   | The process I'm trying | What I'm doing about it, step by step   | 3–5 min |
-| 6   | Outro                  | Wrap up, call to action, what's next    | 1 min   |
+kegiatan yang mau diadakan di vlog:
 
-## Script
+- project yang g selesai selesai
+	- tengah jalan
+	- kembali ke main project lagi...
+	- semuanya campur aduk didalam pikiran
+	- (arahkan ke susun skala prioritas)
+- PRIORITAS
+- DISIPLIN
+- KONSISTEN
+- sudah tau, tapi lambat laun, karena hal hal tertentu, jadi ngedrift dari itu
+	- sekarang coba kembali kesitu lagi, slah satunya dengan vlog ini, untuk bisa dapat yang ak mau semua
+## Intro
 
-### 1. Hook
+- //scene// kamar beranntakan. pov ppintu atas buka pintu - panning ke arahku
+	- yee ni dah berantakan banget se
+	- kek uripku :D
+	- jadi waktunya rapihin ni tempat
+		- kan katanya ruangan tu cerminan pikiran, siapa tau kalau ak rapihin
 
-%% Same as the Hook section above, or move it here once it's final. %%
+- //scene// taruh meja kameranya
+	- tenang isi videonya bukan bersihin kamar doang kok
+	- tapi ini adalah VLOG (TADAAA), video yang udah dari lama aku pingin buat
+	- dimulai sekarang, di tanggal:
+- //scene// scene kalender gantung (ganti dulu kalender dan semua scene )
+	- ya, ini kalender 2025, ak pasang kalender ini, ya tujuannya buat vlog ini, di 2025 ...
+	- hehe
+	- 
+	- selamat datang di 
 
-### 2. Who I am
+- ? kompilasi pergi pergi dan sepedaan, nyambung ke bawah vvvv
+- ? tunjukkan kegiatan sepeda dulu >> lead ke ttg slow living
 
-%% Talking points, not full sentences. Name, where you're from, what you do day to day, one or two personal details that make you memorable. %%
 
-- 
+- yaaa ni berantakan banget
+- kek uripku hehe
+- waktunya ngerapihin ni
+- ey halo rek, selamat datang kembali di channel ini
+- dah lama g ngomong intro itu
+- dan tenang, ni video isinya bukan tentang rapihin kamar kwkwkwkw
+- tapi ini adalah VLOG (TADAA), video yang sudah lama banget ak pingin buat dan upload
+- yang isinya yaa vlog, yaa perjalananku ngerapihin uripku kwoakokwoa
+- selamat datang di vlog pertamaku, tanggal...
+- INTRO VLOG
+- eits ...  lihat kalender itu
+	- yak betul, itu kalender 2025
+	- dan yup, scene ini udah ak pikirin sejak tahun itu, awal mula mau buat vlog dari tahun itu
+	- dan ... baru sekarang upload
+	- BAHKAN NI CHANNEL TERAKHIR UPLOAD ....
+	- hehe
+	- ya kita ganti dlu
+	- (kalender dah 2026) > ulang intro seidikit
+		- dan bahkannnn, ni dah bukan awal 2026 lagi,
+		- bentar...
+		- (cabut kalender sampe tanggal terbatu / minggu lalu)
+		- transisi cabut ke arah muka lagi sambil megang kertas kalender
+		- (MULAI PEMBAHASAN)
 
-### 3. About this channel
+PEMBAHASAN 1
+- tt
 
-%% Why you're starting it, what kind of videos are coming, who it's for, how often you'll upload. %%
 
-- 
 
-### 4. My struggle
 
-%% The story: what the struggle is, when it started, a specific moment that shows it, how it feels. Specific beats general. %%
 
-- 
 
-### 5. The process I'm trying
+# apakah konten vlog dihilangkan dulu atau ditunda
 
-%% What you're doing about it, step by step. What's working, what isn't yet. Show it on camera where you can. %%
+# keluarkan konten kecil kecil:
+- postcard
+- food review
+- cafe review
+- yang bisa terus terusan
 
-- 
+## tujuan:
+- balikin kebiasaan edit
+- nemuin resep warna video
+- riset workflownya
 
-### 6. Outro
 
-%% Write word-for-word. Short recap, invite them to follow the journey (subscribe / comment), tease the next video. %%
-
-## B-roll / Shot list
-
-%% Things to film besides you talking to the camera, per segment. Tick them off while filming. %%
-
-- [ ] Intro: 
-- [ ] Who I am: 
-- [ ] Channel: 
-- [ ] Struggle: 
-- [ ] Process: 
-- [ ] Outro: 
-
-## Title & thumbnail ideas
-
-%% Write 5+ title options, then pick one. Thumbnail: your face + 2–4 words max. %%
-
-- 
-
-## Description
-
-%% First 2 lines show above "more": summarize the video. Then links and socials. %%
-
-## Notes
+## vlognya bisa sambil jalan ngelakuin semua itu
 

@@ -135,6 +135,11 @@ hal yang pingin dilakukan:
 	1. tujuan karya bisa dilihat orang dan dikagumi orang
 	2. ga tau jadi job atau enda
 2. ngelakuin content creation
+	1. short
+	2. postcard
+	3. photovlog
+3. nyelesaiin project it kerjaan (maintain kerjaan it)
+4. 
 
 
 - tentang bingugn mau ngatur video yang ada

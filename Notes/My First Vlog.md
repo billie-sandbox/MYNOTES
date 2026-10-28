@@ -158,4 +158,8 @@ hal yang pingin dilakukan:
 - ey berantakan
 - //scene// zoom sedikit lebih dekat setengah badan
 - kek uripku :""
+- ey halo rek
+- //scene// ambil kamera atas pintu ke meja
+- selamat datang kembali di channel ini
+-  //logo//
 - 

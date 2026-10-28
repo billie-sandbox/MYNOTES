@@ -152,3 +152,10 @@ hal yang pingin dilakukan:
 	- ey halo rek
 	- selamat datang kembali di channel ini
 	- tenang video ini isinya bukan tentang 
+
+
+- //scene// atas pintu > buka > pan ke aku
+- ey berantakan
+- //scene// zoom sedikit lebih dekat setengah badan
+- kek uripku :""
+- 

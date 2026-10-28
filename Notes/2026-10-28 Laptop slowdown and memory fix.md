@@ -262,7 +262,86 @@ glxinfo -B | grep renderer     # which GPU renders the desktop
 nvidia-smi                     # NVIDIA load, power state, memory
 ```
 
+## Overheating finding (2026-10-29)
+
+The new Conky strip showed **CPU 97 °C at only 17% load**, while on battery.
+
+| Sensor | Value |
+|---|---|
+| Package | 97 °C |
+| Cores | 79 / 84 / 97 / 97 °C |
+| Fan | ~3,560 RPM |
+| CPU limit (Tjmax) | 100 °C, so it was throttling |
+
+- **Cause at that moment:** one Firefox tab (an "Isolated Web Co" process) was using 100% of one core. After it calmed down, the temperature dropped to 72 °C.
+- **Why it's still a problem:** ~97 °C from a *single* busy core is too hot. A healthy T480 should be around 70–80 °C under that load. The laptop is ~8 years old, so the likely causes are a **dusty fan and heatsink** or **dried-out thermal paste**. Cleaning the fan and replacing the paste usually brings temperatures down 10–20 °C.
+- [ThinkPad T480 repaste and fan cleaning](https://www.google.com/search?q=thinkpad+t480+repaste+fan+cleaning+high+temperature)
+
+Check temperatures and fan:
+
+```bash
+cat /sys/class/hwmon/hwmon*/name    # find "coretemp"
+cat /sys/class/hwmon/hwmonN/temp*_input   # millidegrees; N = the coretemp one
+cat /proc/acpi/ibm/fan             # ThinkPad fan speed and level
+```
+
+## Conky resource strip (installed 2026-10-29)
+
+A compact, always-on-top line of system stats attached to the top of the bottom panel, at the bottom-right of the screen:
+
+```
+CPU 5% 72° · RAM 55% · ZRAM 512K/7.7G · SWAP 0K/6.0G · PSI 0.0% · GPU 5%
+```
+
+- Normal values are grey and turn **yellow/red only when high**, so it doesn't distract.
+- Extra items appear only when needed: the **heaviest process** when RAM ≥ 80%, and **DISK** when ≥ 95% full.
+- The background is solid `#191919`, the same as the panel, so it's readable over any page.
+
+| Item | Meaning | Yellow / red |
+|---|---|---|
+| CPU | total CPU % | 80 / 95 % |
+| ° | CPU package temperature (`coretemp`) | 80 / 90 °C |
+| RAM | RAM used % | 80 / 90 % |
+| ZRAM | compressed swap in RAM, used/size; fills first, normal to use | 50 / 80 % |
+| SWAP | disk swap file, used/size; only used once zram is full, **so filling = slowdown coming** | 10 / 50 % |
+| PSI | memory pressure, % of the last 10 s programs waited on memory | 3 / 8 % |
+| GPU | MX150 load (`off` in on-demand mode) | — |
+
+### Files
+- `~/.config/conky/conky.conf`: the compact layout (active). Thresholds are in the comments at the top. Conky reloads when the file is saved.
+- `~/.config/conky/conky-full.conf`: the detailed multi-section layout (CPU per core, graphs, top 5 processes, GPU temp/VRAM, disk, Wi-Fi, batteries). Use it with `conky -c ~/.config/conky/conky-full.conf -d`.
+- `~/.config/conky/stats.sh`: helper script used by both layouts. Modes: `psi`, `zram`, `swap`, `gpu`, `gpu-short`. It sets `LC_ALL=C` so decimals use `.` regardless of locale.
+- `~/.config/autostart/conky.desktop`: starts Conky 10 s after login (toggle it in **Startup Applications**).
+
+### Setup steps (done)
+1. Install in a normal terminal (`sudo` can't ask for a password through Claude Code's `!`): `sudo apt install conky-all`
+2. Start: `conky -c ~/.config/conky/conky.conf -d`. Stop: `pkill conky`
+3. Autostart:
+   ```bash
+   printf '[Desktop Entry]\nType=Application\nName=Conky\nExec=sh -c "sleep 10 && conky -c %s/.config/conky/conky.conf -d"\nX-GNOME-Autostart-enabled=true\n' "$HOME" > ~/.config/autostart/conky.desktop
+   ```
+
+### Customizing (`conky.conf`)
+| Change | Setting |
+|---|---|
+| Corner | `alignment` (`bottom_right`, `top_left`, …) |
+| Offset from edge | `gap_x`, `gap_y` (`gap_y = 40` = the panel height, so it sits right on top of it) |
+| Background | `own_window_colour` |
+| Text / warning colors | `default_color`, `color3` (yellow), `color4` (red) |
+| Font | `font = 'DejaVu Sans Mono:size=8'` |
+| Refresh | `update_interval` (s); helper values refresh every 5 s |
+
+### What didn't work
+Placing it **inside** the Cinnamon panel isn't possible:
+- `own_window_type = 'override'` crashes Conky 1.19 here (X error, BadMatch), with or without a transparent background.
+- `'dock'` runs, but Cinnamon draws the panel on top of it.
+
+So `'normal'` with `above` hints, sitting just above the panel, is the most compact working option. For stats truly inside the panel, a Cinnamon applet like *Bash Sensors* could run `stats.sh` instead.
+
+Undo: `pkill conky; rm ~/.config/autostart/conky.desktop; sudo apt remove conky-all` (the config stays in `~/.config/conky/`).
+
 ## To do later
+- [ ] Clean the fan/heatsink and replace thermal paste (CPU hit 97 °C on one busy core, see "Overheating finding")
 - [ ] Install and configure psi-notify (see "Early warning" above)
 - [ ] Decide CPU power profile: `balanced` vs `performance` when plugged in
 - [ ] Decide GPU mode: keep `nvidia` or switch to `on-demand`

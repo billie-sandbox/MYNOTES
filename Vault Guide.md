@@ -45,6 +45,8 @@ All templates live in `Templates/`. Ask Claude to create notes for you; it follo
 | `Attachments/` | Images and PDFs (pasted files land here automatically) |
 | *root* | Journal entries (`YYYY-MM-DD HHmm`) and this guide |
 
+**Daily notes:** each one starts with today's date in `created`, a **Todo** checklist (type `- [ ] `), and a **Notes** section to write in. At the bottom, **Today's notes** lists everything else made that day. Unfinished todos don't roll over by themselves, so copy them to the next day.
+
 If unsure: my own thoughts go in `Notes/`, things that exist in the world go in `References/`.
 
 ## The rules

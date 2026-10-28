@@ -20,6 +20,8 @@ Organization comes from properties and links, not folders. Folders are flat (no 
 - `Templates/` — note templates; `Templates/Bases/` holds every `.base` file.
 - `Attachments/` — images and PDFs.
 
+Daily notes are for writing first: the template has `created: {{date}}`, a `## Todo` section (`- [ ]` checkboxes), `## Notes`, then `## Today's notes` embedding `![[Daily.base]]` (lists notes from that day). Bases can't query checkboxes, so unfinished todos are carried forward by hand.
+
 Journal entries are created with Unique note creator (`YYYY-MM-DD HHmm`, Journal template) at the vault root.
 
 ### How a note is classified

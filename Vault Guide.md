@@ -18,6 +18,7 @@ Create a new note, then run **Templates: Insert template** (`Ctrl+P`) and pick t
 | I want to… | Template / command | Shows up in |
 | --- | --- | --- |
 | Log my day | **Daily notes: Open today's daily note** | `Daily/` |
+| Make a note named with today's date (e.g. `2026-10-28 Team meeting`) | **Templater: Create Templates/New Dated Note**, then pick a template and type the name | its category |
 | Jot a quick thought | **Unique note creator: Create new unique note** | [[Journal]] |
 | Capture an idea | Evergreen Template | [[Evergreen]] |
 | Plan a long video | Long-form Video Template | [[Content]] |

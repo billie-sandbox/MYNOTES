@@ -60,7 +60,11 @@ The vault syncs between machines via git, remote `origin` = https://github.com/b
 
 Core plugins in use: Properties, Daily notes, Templates, Unique note creator, Bases, Canvas, Backlinks, Bookmarks, Sync.
 
-The only community plugin is **Git** (`obsidian-git`, settings in `.obsidian/plugins/obsidian-git/data.json`). Don't rely on Dataview, Templater, etc. While Obsidian is open the plugin auto commits and syncs 5 minutes after the last edit, pulls every 10 minutes, and pulls on startup. Its commits are titled `vault backup: <date>`. So:
+Community plugins are **Templater** and **Git**. Don't rely on Dataview, Tasks, etc.
+
+**Templater** (`templater-obsidian`, settings in `.obsidian/plugins/templater-obsidian/data.json`) is used for one thing only: `Templates/New Dated Note.md`, run via the command *Templater: Create Templates/New Dated Note*. It asks for a template and a name, renames the note to `YYYY-MM-DD <name>`, and fills in the chosen template (substituting `{{date}}`, `{{title}}`, `{{time}}`). All other templates stay core-Templates syntax (`{{date}}`); don't convert them to `<% %>`. `trigger_on_file_creation` is off so it never touches daily/unique notes.
+
+**Git** (`obsidian-git`, settings in `.obsidian/plugins/obsidian-git/data.json`): while Obsidian is open the plugin auto commits and syncs 5 minutes after the last edit, pulls every 10 minutes, and pulls on startup. Its commits are titled `vault backup: <date>`. So:
 - Expect commits to appear on their own; check `git status`/`git log` before making manual commits. A multi-file change made through the shell may be auto-committed before a manual commit happens.
 - Plugin settings changes must be written to `data.json` and then picked up with `obsidian plugin:reload id=obsidian-git` (Obsidian overwrites `data.json` from memory otherwise).
 

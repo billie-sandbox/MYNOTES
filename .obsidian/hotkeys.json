@@ -7,5 +7,13 @@
       ],
       "key": "T"
     }
+  ],
+  "templater-obsidian:create-Templates/New Dated Note.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "N"
+    }
   ]
 }

@@ -162,4 +162,5 @@ hal yang pingin dilakukan:
 - //scene// ambil kamera atas pintu ke meja
 - selamat datang kembali di channel ini
 -  //logo//
+- tenang video ini isinya bukan beresin kamar doang
 - 

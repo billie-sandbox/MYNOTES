@@ -164,5 +164,7 @@ hal yang pingin dilakukan:
 -  //logo//
 - tenang video ini isinya bukan beresin kamar doang
 	- tapi ngerapihin ni pikiran dan uripku
+	- yang menurutku berantakan ini
+	- peng
 - di seri video yang dari lamaa pingin tak buat
 - selamat datang di 

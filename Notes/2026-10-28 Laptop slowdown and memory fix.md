@@ -176,7 +176,97 @@ journalctl --since "15 min ago" -p warning --no-pager | tail -25
 
 When it slows down: open `about:processes` in Firefox first.
 
+## Early warning: psi-notify (planned, not installed yet)
+
+psi-notify only shows desktop notifications when the system is under pressure; it **never kills anything**. It's in the Mint/Ubuntu repositories (1.3.1) and runs as a user service.
+
+It reads the kernel's pressure counters (`/proc/pressure/*`): the % of time programs are stalled waiting on CPU, memory or disk. That's a better early signal than "RAM % used". During the freeze, memory pressure hit ~12%, so an 8% threshold would have warned in time.
+
+```bash
+sudo apt install psi-notify
+mkdir -p ~/.config/psi-notify
+printf 'update 5\nthreshold cpu some avg10 50.00\nthreshold memory some avg10 8.00\nthreshold io full avg10 15.00\n' > ~/.config/psi-notify/config
+systemctl --user enable --now psi-notify
+systemctl --user status psi-notify --no-pager | head -8   # check: active (running)
+```
+
+| Config line | Alerts when… |
+|---|---|
+| `update 5` | (how often it checks: every 5 s) |
+| `threshold memory some avg10 8.00` | programs waited on memory >8% of the last 10 s (default is 10) |
+| `threshold cpu some avg10 50.00` | programs waited for CPU >50% of the time |
+| `threshold io full avg10 15.00` | all work was blocked on disk >15% of the time |
+
+- Tune the numbers in `~/.config/psi-notify/config`, then run `systemctl --user restart psi-notify`.
+- Undo: `systemctl --user disable --now psi-notify && sudo apt remove psi-notify`
+- When a warning pops up: open `about:processes` in Firefox, close the heavy tabs, then close unused apps.
+- Optional live graph: Cinnamon **System Monitor** applet (right-click panel → Applets → Download → "System Monitor").
+- Links: [psi-notify GitHub](https://github.com/cdown/psi-notify), [PSI explained](https://www.google.com/search?q=linux+PSI+pressure+stall+information+explained)
+
+## Hardware and performance settings
+
+Checked 2026-10-28, on AC power.
+
+**Machine:** Lenovo ThinkPad T480 (`20L6S0VD00`)
+
+### CPU: Intel Core i7-8550U
+4 cores / 8 threads, 1.8 GHz base, up to 4.0 GHz turbo.
+
+| Setting | Value | Meaning |
+|---|---|---|
+| Driver | `intel_pstate` | Intel's own frequency control (correct) |
+| Governor | `powersave` | normal for intel_pstate; still boosts on demand, so the name is misleading |
+| Power profile | **balanced** | Mint's default (power-profiles-daemon) |
+| Energy preference (EPP) | `balance_performance` | leans towards performance |
+| Turbo | enabled | ✅ |
+| thermald | active | manages heat |
+| Observed speed | ~2.4–2.6 GHz on all cores | boosting normally |
+
+The CPU is not held back, just not at maximum. To go all out while plugged in (more heat and fan noise):
+
+```bash
+powerprofilesctl list
+powerprofilesctl set performance   # back to normal: powerprofilesctl set balanced
+```
+
+You can also use the power/battery applet in the Cinnamon panel. Use `balanced` on battery.
+
+### GPU: hybrid graphics
+- **Intel UHD Graphics 620**: built into the CPU, driver `i915`, low power.
+- **NVIDIA GeForce MX150**: separate GPU, driver `nvidia`.
+- **PRIME mode: `nvidia`** (`prime-select query`). The whole desktop and all apps render on the MX150. At the time of checking it was at 13% load, in power state P0.
+
+| Mode | Desktop runs on | Good for | Cost |
+|---|---|---|---|
+| `nvidia` (current) | MX150 | OBS recording (NVENC hardware encoder), Steam games | more power and heat, worse battery |
+| `on-demand` | Intel | battery life, cooler; pick NVIDIA per app (right-click → "Run with NVIDIA GPU") | must choose NVIDIA per app |
+
+Switch with `sudo prime-select on-demand` (or `nvidia`) and log out/in, or use **NVIDIA Settings → PRIME Profiles**.
+
+**Recommendation:** mostly plugged in, recording or gaming → keep `nvidia`. Mostly on battery → `on-demand`. GPU and CPU settings were **not** the cause of the 2026-10-28 freeze; that was memory.
+
+### T480 throttling (optional, advanced)
+The T480 is known to throttle the CPU under sustained load: Lenovo's firmware caps power, and the CPU can drop to around 2 GHz. The community tool **`throttled`** (erpalma) fixes this. Research it before installing.
+- [ThinkPad T480 throttling fix Linux](https://www.google.com/search?q=thinkpad+t480+throttling+linux+throttled+erpalma)
+- [prime-select on-demand vs nvidia Linux Mint](https://www.google.com/search?q=prime-select+on-demand+vs+nvidia+linux+mint)
+
+Check commands:
+
+```bash
+cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+cat /sys/devices/system/cpu/cpu0/cpufreq/energy_performance_preference
+cat /sys/devices/system/cpu/cpufreq/policy*/scaling_cur_freq   # current kHz per core
+powerprofilesctl get
+prime-select query
+glxinfo -B | grep renderer     # which GPU renders the desktop
+nvidia-smi                     # NVIDIA load, power state, memory
+```
+
 ## To do later
+- [ ] Install and configure psi-notify (see "Early warning" above)
+- [ ] Decide CPU power profile: `balanced` vs `performance` when plugged in
+- [ ] Decide GPU mode: keep `nvidia` or switch to `on-demand`
+- [ ] Optionally research the T480 `throttled` fix
 - [ ] Free disk space (98% full, 14 GB free). Find the big folders first, e.g. `du -sh ~/* | sort -h`
 - [ ] Run all pending system updates in Update Manager (security fixes)
 - [ ] Optionally quiet the Termius AppArmor log spam

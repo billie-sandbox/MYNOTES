@@ -163,4 +163,6 @@ hal yang pingin dilakukan:
 - selamat datang kembali di channel ini
 -  //logo//
 - tenang video ini isinya bukan beresin kamar doang
-- 
+	- tapi ngerapihin ni pikiran dan uripku
+- di seri video yang dari lamaa pingin tak buat
+- selamat datang di 

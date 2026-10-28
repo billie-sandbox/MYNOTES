@@ -1,11 +1,20 @@
 ---
 categories:
   - "[[Projects]]"
+created: {{date}}
+status:
+  - idea
 type: []
 org: []
 start:
 year:
 url:
-status:
 ---
 
+## Goal
+
+
+## Next steps
+- [ ] 
+
+## Log

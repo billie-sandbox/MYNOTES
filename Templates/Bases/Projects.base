@@ -13,6 +13,8 @@ properties:
     displayName: Type
   note.year:
     displayName: Year
+  note.created:
+    displayName: Created
 views:
   - type: table
     name: Table
@@ -30,3 +32,41 @@ views:
     columnSize:
       file.name: 209
       note.type: 199
+  - type: table
+    name: Active
+    filters:
+      and:
+        - status.contains("active")
+    order:
+      - file.name
+      - type
+      - start
+      - url
+    sort:
+      - property: file.mtime
+        direction: DESC
+  - type: table
+    name: Ideas
+    filters:
+      and:
+        - status.contains("idea")
+    order:
+      - file.name
+      - type
+      - created
+    sort:
+      - property: created
+        direction: DESC
+  - type: table
+    name: Paused or done
+    filters:
+      or:
+        - status.contains("paused")
+        - status.contains("done")
+    order:
+      - file.name
+      - status
+      - year
+    sort:
+      - property: file.mtime
+        direction: DESC

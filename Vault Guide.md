@@ -19,6 +19,7 @@ Create a new note, then run **Templates: Insert template** (`Ctrl+P`) and pick t
 | --- | --- | --- |
 | Log my day | **Daily notes: Open today's daily note** | `Daily/` |
 | Make a note named with today's date (e.g. `2026-10-28 Team meeting`) | **Templater: Create Templates/New Dated Note**, then pick a template and type the name | its category |
+| Note a project idea | Add a line in [[Project Ideas]]. Don't make a new note | [[Home]] |
 | Jot a quick thought | **Unique note creator: Create new unique note** | [[Journal]] |
 | Capture an idea | Evergreen Template | [[Evergreen]] |
 | Plan a long video | Long-form Video Template | [[Content]] |
@@ -48,6 +49,8 @@ All templates live in `Templates/`. Ask Claude to create notes for you; it follo
 
 **Daily notes:** each one starts with today's date in `created`, a **Todo** checklist (type `- [ ] `), and a **Notes** section to write in. At the bottom, **Today's notes** lists everything else made that day. Unfinished todos don't roll over by themselves, so copy them to the next day.
 
+**Home and project ideas:** [[Home]] (bookmarked) is the dashboard: today's daily note, active projects, project ideas, content in progress and recent edits. Every raw project idea goes into the single [[Project Ideas]] note as one dated line. When an idea is worth planning, give it its own note from the Project Template (`status: idea` → `active` → `paused`/`done`) and link it from Project Ideas.
+
 If unsure: my own thoughts go in `Notes/`, things that exist in the world go in `References/`.
 
 ## The rules
@@ -55,7 +58,7 @@ If unsure: my own thoughts go in `Notes/`, things that exist in the world go in 
 1. **What a note *is* → a link in `categories`.** `categories: ["[[Books]]"]`, not a `#books` tag.
 2. **Related things → links too.** Author, genre, people, location, topics, platform: all `[[links]]`. This is what connects notes and fills the hub views.
 3. **Links to notes that don't exist yet are fine.** They're breadcrumbs; create the note later if it becomes useful.
-4. **Tags only for a state or format:** `#to-read`, `#0🌲` (evergreen idea), `#journal`, `#daily` / `#monthly`.
+4. **Tags only for a state or format:** `#to-read`, `#0🌲` (evergreen idea), `#journal`, `#daily` / `#monthly`, `#inbox` (capture notes like [[Project Ideas]]).
 5. **Category names are plural:** Books, People, Places.
 6. **Dates are `YYYY-MM-DD`,** so daily notes can find everything from that day.
 7. **Ratings go from 1 to 7.**

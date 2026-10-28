@@ -28,11 +28,17 @@ Journal entries are created with Unique note creator (`YYYY-MM-DD HHmm`, Journal
 
 - **What a note is → a link in `categories`**, e.g. `categories: ["[[Books]]"]`. The matching Base filters on `categories.contains(link("Books"))`, so a note appears in its category hub automatically. Never classify with tags.
 - **Sub-types and related things → links too**: `type: ["[[Authors]]"]`, `author`, `genre`, `topics`, `loc`, `people`, `org`. Links to notes that don't exist yet are fine and intended.
-- **Tags only for state/format**: `to-read`, `0🌲` (evergreen idea notes), `journal`, `daily`/`monthly`, `categories` (on hub notes), and nested type tags like `movies/genres`.
+- **Tags only for state/format**: `to-read`, `0🌲` (evergreen idea notes), `journal`, `daily`/`monthly`, `inbox` (capture notes), `categories` (on hub notes), and nested type tags like `movies/genres`.
 - Category names are plural. Dates are `YYYY-MM-DD`. Ratings are 1–7.
 - Property types are declared in `.obsidian/types.json`; add new properties there with the right type.
 
 When creating a note, start from the matching template in `Templates/` so the properties are complete. Bases embedded with a `#View` that filters on `this` (e.g. `![[Meetings.base#Person]]` in a person note) show entries linked to the embedding note.
+
+### Projects and the Home dashboard
+
+- **Project ideas go in one note: `Notes/Project Ideas.md`** (tag `inbox`). Never create a new note per raw idea: add a dated bullet (`- YYYY-MM-DD idea`) at the top of its *Inbox* section. When an idea is worth planning, create a project note (Project Template, `categories: [[Projects]]`) and replace the bullet with a link under *Promoted*; dropped ideas move to *Parked*.
+- Project `status` (multitext) values: `idea`, `active`, `paused`, `done`. Projects.base views: Table, Active, Ideas, Paused or done.
+- `Home.md` (vault root, alias Dashboard) is the dashboard: embeds `Home.base` (views Today, Recently edited) plus `Projects.base#Active`, `Projects.base#Ideas`, `Content.base#In progress`. Built only from core Bases; no dashboard/homepage plugins. Home, Project Ideas and Vault Guide are bookmarked.
 
 ### Content pipeline
 

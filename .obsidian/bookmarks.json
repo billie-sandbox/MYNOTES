@@ -2,6 +2,14 @@
   "items": [
     {
       "type": "file",
+      "path": "Home.md"
+    },
+    {
+      "type": "file",
+      "path": "Notes/Project Ideas.md"
+    },
+    {
+      "type": "file",
       "path": "Vault Guide.md"
     }
   ]

@@ -1,0 +1,27 @@
+filters:
+  and:
+    - '!file.inFolder("Templates")'
+views:
+  - type: list
+    name: Today
+    filters:
+      and:
+        - file.inFolder("Daily")
+        - file.name == today().format("YYYY-MM-DD")
+    order:
+      - file.name
+  - type: table
+    name: Recently edited
+    filters:
+      and:
+        - file.mtime > now() - "7d"
+        - '!file.inFolder("Daily")'
+        - file.ext == "md"
+    order:
+      - file.name
+      - categories
+      - file.mtime
+    sort:
+      - property: file.mtime
+        direction: DESC
+    limit: 10

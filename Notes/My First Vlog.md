@@ -168,3 +168,6 @@ hal yang pingin dilakukan:
 	- peng
 - di seri video yang dari lamaa pingin tak buat
 - selamat datang di 
+
+- eyy halo rek
+- berantakan 

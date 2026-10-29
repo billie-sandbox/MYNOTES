@@ -17,6 +17,12 @@ The one place for project ideas. Don't make a new note for an idea — add a lin
 - dedicated esp32 shit camera (dither), reference, claudeai project shit camera
 	- fitur langsung upload, daily log, max 3 photo > susun story timestamped
 - boardbank
+
+- buka studio atau agensi kecil
+	- sama viscel
+	- main stock footage dan foto
+	- ui ux
+	- desain grafis > output merch
 ## Promoted
 Ideas that became their own project notes (see [[Projects]]).
 - personal portofolio [[2026-10-28 personal portofolio]]

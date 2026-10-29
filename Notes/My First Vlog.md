@@ -169,5 +169,10 @@ hal yang pingin dilakukan:
 - di seri video yang dari lamaa pingin tak buat
 - selamat datang di 
 
+- yakk berantakan berantakan...
+- kek uripku :""
 - eyy halo rek
-- berantakan 
+- kembali lagi di channel ini
+- tenang video ini isinya bukan beresin ruangan ini ya
+	- d
+- 

@@ -184,14 +184,23 @@ hal yang pingin dilakukan:
 - kembali lagi di channel ini
 - kembali lagi?? km gtau channel apa ini??
 - ya channel ini dah mati pas dah mulai jalan wakwoakoakwok
+- nah ak mau mulai lagi
 - tapi akhirnya ak bisa upload video yang pengen tak upload dari lama
 - yaitu adalah...
 - ... vlog - yup...
+- dan tenang, isinya bukan bersihin kamar
 - selamat datang di... // rotate ke calender dan ada title //
 	- BILLIE'S VLOGGG -- BVLOG
 	- ya ak g ahli ngasi nama
 	- tapi tunggu
 	- kalender 2025
 	- // rotate ke ak lagi //
-	- yup betoels
+	- yup betull
+	- ni video dah delay dari taon lalu
+	- ak pasang kalender itu ya untuk intro ini
+	- tak ganti dlu
+	- // rotate ke kalender lagi//
+	- //ganti kalender//
+	- 
+	- 
 - 

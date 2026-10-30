@@ -182,5 +182,11 @@ hal yang pingin dilakukan:
 - kek uripku :"" hehe
 - ey halo rek
 - kembali lagi di channel ini
-- weh dah lama ga bilang itu
+- kembali lagi?? km gtau channel apa ini??
+- ya channel ini dah mati pas dah mulai jalan wakwoakoakwok
+- tapi akhirnya ak bisa upload video yang pengen tak upload dari lama
+- yaitu adalah...
+- ... vlog - yup...
+- BILLIE'S VLOGGG -- BVLOG
+- ya ak g ahli ngasi nama
 - 

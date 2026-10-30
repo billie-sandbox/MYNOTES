@@ -233,3 +233,14 @@ hal yang pingin dilakukan:
 - akhir akhir ini agak lambat
 - bukannya ak jg g ngapa ngapain
 - sekarang aku juga freelance developer 
+
+
+
+- berangkat kerjain
+- sama viscel
+- g ada anehnya
+- tapi masalahnya...
+- sampe malem , g ada lakuin yang lain
+
+
+- 

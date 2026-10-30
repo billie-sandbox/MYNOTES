@@ -4,10 +4,13 @@ aliases:
 ---
 # Home
 
-Quick links: [[Project Ideas]] · [[Vault Guide]] · [[Projects]] · [[Content]] · [[Journal]]
+Quick links: [[Todo]] · [[Project Ideas]] · [[Vault Guide]] · [[Projects]] · [[Content]] · [[Journal]]
 
 ## Today
 ![[Home.base#Today]]
+
+## Todo (no date yet)
+![[Todo#Inbox]]
 
 ## Projects in progress
 ![[Projects.base#Active]]

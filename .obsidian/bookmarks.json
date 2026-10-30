@@ -6,6 +6,10 @@
     },
     {
       "type": "file",
+      "path": "Notes/Todo.md"
+    },
+    {
+      "type": "file",
       "path": "Notes/Project Ideas.md"
     },
     {

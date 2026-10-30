@@ -40,6 +40,12 @@ When creating a note, start from the matching template in `Templates/` so the pr
 - Project `status` (multitext) values: `idea`, `active`, `paused`, `done`. Projects.base views: Table, Active, Ideas, Paused or done.
 - `Home.md` (vault root, alias Dashboard) is the dashboard: embeds `Home.base` (views Today, Recently edited) plus `Projects.base#Active`, `Projects.base#Ideas`, `Content.base#In progress`. Built only from core Bases; no dashboard/homepage plugins. Home, Project Ideas and Vault Guide are bookmarked.
 
+### Todos and people to contact
+
+- Dated todos → that day's daily note (`## Todo`). Undated todos → the single `Notes/Todo.md` (tag `inbox`; sections *Inbox* and *Someday*); move a line to a daily note once it has a day. Project todos stay in the project note (*Next steps* / *Findings*).
+- Questions for a person → their People note (`References/<name>.md`, People Template) under `## To ask` (checkboxes). A reminder to contact them goes in Todo as a link, e.g. `- [ ] Contact [[nakoaguy]] about X`. When the meeting happens, a Meeting note with `people: [[Name]]` shows up on the person's note.
+- Home embeds `![[Todo#Inbox]]`; Todo is bookmarked.
+
 ### Content pipeline
 
 Long- and short-form video live in the `[[Content]]` category (`Categories/Content.md`, `Templates/Bases/Content.base`). Templates: `Long-form Video Template`, `Short-form Video Template` (script lives inside the content note).

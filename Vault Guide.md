@@ -19,6 +19,8 @@ Create a new note, then run **Templates: Insert template** (`Ctrl+P`) and pick t
 | --- | --- | --- |
 | Log my day | **Daily notes: Open today's daily note** | `Daily/` |
 | Make a note named with today's date (e.g. `2026-10-28 Team meeting`) | **Templater: Create Templates/New Dated Note**, then pick a template and type the name | its category |
+| Add a todo with no date yet | Add a checkbox in [[Todo]] | [[Home]] |
+| Something to ask a person | Their People note → *To ask* (plus a `Contact [[Name]]` line in [[Todo]]) | their note |
 | Note a project idea | Add a line in [[Project Ideas]]. Don't make a new note | [[Home]] |
 | Jot a quick thought | **Unique note creator: Create new unique note** | [[Journal]] |
 | Capture an idea | Evergreen Template | [[Evergreen]] |

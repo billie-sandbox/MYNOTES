@@ -215,6 +215,17 @@ hal yang pingin dilakukan:
 - jadi, pertama, apa yang sebenernya berantakan
 - well
 - ada buanyak hal yang mau tak lakuin
-- contohnya
-- //sambil tulis di kertas kalender//
-- 
+- dan hampir semua dah tak lakuin si, dulu ak kebanyakan planning, trus akhirnya ak lakuin semua kaya
+	- kerja freelance it
+	- rutin fotografi
+	- jalanin videografi
+	- jalanin konten sosmed, channel jalan dengan beberapa segmen
+	- ngelakuin review tentang banyak hal
+	- ngedit video
+	- jalanin hobi elektro dan sampe dapet job elektro
+	- ngonten sepedaan
+	- intinya - slow living lah
+- slow living ndasmu
+- slow income yang ada
+- hehe, yaa begitulah
+- ak aja sampe 

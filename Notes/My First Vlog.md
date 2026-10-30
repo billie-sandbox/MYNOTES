@@ -228,4 +228,8 @@ hal yang pingin dilakukan:
 - slow living ndasmu
 - slow income yang ada
 - hehe, yaa begitulah
-- ak aja sampe 
+- ak aja sampe ngejual kameraku
+	- info yang mau beli, ke threads atau instagramku aja
+- akhir akhir ini agak lambat
+- bukannya ak jg g ngapa ngapain
+- sekarang aku juga freelance developer 

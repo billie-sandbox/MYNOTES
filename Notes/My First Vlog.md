@@ -190,5 +190,8 @@ hal yang pingin dilakukan:
 - selamat datang di... // rotate ke calender dan ada title //
 	- BILLIE'S VLOGGG -- BVLOG
 	- ya ak g ahli ngasi nama
-	- 
+	- tapi tunggu
+	- kalender 2025
+	- // rotate ke ak lagi //
+	- yup betoels
 - 

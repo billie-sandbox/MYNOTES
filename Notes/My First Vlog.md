@@ -195,8 +195,8 @@ hal yang pingin dilakukan:
 	- ya ak g ahli ngasi nama
 	- tapi tunggu
 	- kalender 2025
-	- // rotate ke ak lagi //
 	- yup betull
+	- // rotate ke ak lagi //
 	- ni video dah delay dari taon lalu
 	- dan ak dah pernah buat video update channel, itu ... tahun lalu
 	- tak pasang kalender baru dlu
@@ -205,6 +205,16 @@ hal yang pingin dilakukan:
 	- nah udah
 	- dan bahkan, ini bukan awal 2026 lagi
 	- //sobek sobek , sambil kaya memory montage las uplaod//
+	- //transisi sobek kalender//
 	- ini dah akhir 2026 WOI
-	- 
+	- setebel ini yang udah ak lewatin
+	- jadi vlog tentang apakah ini
+	- yup betuls
+		- ak ngerapihin ini (pikiran) dan semua ini
+		- hope you enjoy
+- jadi, pertama, apa yang sebenernya berantakan
+- well
+- ada buanyak hal yang mau tak lakuin
+- contohnya
+- //sambil tulis di kertas kalender//
 - 

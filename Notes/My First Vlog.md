@@ -187,6 +187,8 @@ hal yang pingin dilakukan:
 - tapi akhirnya ak bisa upload video yang pengen tak upload dari lama
 - yaitu adalah...
 - ... vlog - yup...
-- BILLIE'S VLOGGG -- BVLOG
-- ya ak g ahli ngasi nama
+- selamat datang di... // rotate ke calender dan ada title //
+	- BILLIE'S VLOGGG -- BVLOG
+	- ya ak g ahli ngasi nama
+	- 
 - 

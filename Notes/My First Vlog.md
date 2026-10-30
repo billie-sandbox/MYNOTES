@@ -180,12 +180,13 @@ hal yang pingin dilakukan:
 
 - ey berantakan
 - kek uripku :"" hehe
+- harus diberesin ni, ... dua dua nya
 - ey halo rek
 - kembali lagi di channel ini
 - kembali lagi?? km gtau channel apa ini??
 - ya channel ini dah mati pas dah mulai jalan wakwoakoakwok
 - nah ak mau mulai lagi
-- tapi akhirnya ak bisa upload video yang pengen tak upload dari lama
+- dan akhirnya ak bisa upload video yang pengen tak upload dari lama
 - yaitu adalah...
 - ... vlog - yup...
 - dan tenang, isinya bukan bersihin kamar
@@ -197,10 +198,13 @@ hal yang pingin dilakukan:
 	- // rotate ke ak lagi //
 	- yup betull
 	- ni video dah delay dari taon lalu
-	- ak pasang kalender itu ya untuk intro ini
-	- tak ganti dlu
+	- dan ak dah pernah buat video update channel, itu ... tahun lalu
+	- tak pasang kalender baru dlu
 	- // rotate ke kalender lagi//
 	- //ganti kalender//
-	- 
+	- nah udah
+	- dan bahkan, ini bukan awal 2026 lagi
+	- //sobek sobek , sambil kaya memory montage las uplaod//
+	- ini dah akhir 2026 WOI
 	- 
 - 

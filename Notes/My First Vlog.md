@@ -175,4 +175,12 @@ hal yang pingin dilakukan:
 - kembali lagi di channel ini
 - tenang video ini isinya bukan beresin ruangan ini ya
 	- d
+
+
+
+- ey berantakan
+- kek uripku :"" hehe
+- ey halo rek
+- kembali lagi di channel ini
+- weh dah lama ga bilang itu
 - 

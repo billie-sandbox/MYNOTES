@@ -24,7 +24,7 @@ The one place for project ideas. Don't make a new note for an idea — add a lin
 	- ui ux
 	- desain grafis > output merch
 	- dodolan excel
-	- 
+- stream game, dengan macam macam interaksi saweria dan stream web connect
 ## Promoted
 Ideas that became their own project notes (see [[Projects]]).
 - personal portofolio [[2026-10-28 personal portofolio]]

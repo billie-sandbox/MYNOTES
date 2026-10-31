@@ -340,6 +340,69 @@ So `'normal'` with `above` hints, sitting just above the panel, is the most comp
 
 Undo: `pkill conky; rm ~/.config/autostart/conky.desktop; sudo apt remove conky-all` (the config stays in `~/.config/conky/`).
 
+## Active window outline: xborders (installed 2026-10-30)
+
+Cinnamon has no setting for a colored border around the focused window (the theme draws only a 1 px frame). **xborders** ([github.com/deter0/xborder](https://github.com/deter0/xborder), v3.4) adds one: a small Python script that draws a transparent, click-through overlay with an outline around the active window. It hides the outline on fullscreen windows.
+
+- Works on every app (Firefox, Electron apps, terminals), unlike theme edits, which CSD/Electron/Qt apps ignore.
+- Needs X11 and a compositor. Cinnamon's Muffin composites, so it just works. (picom can't run alongside Cinnamon.)
+- No install needed: its dependencies (`python3-gi`, `python3-gi-cairo`, `python3-cairo`, `gir1.2-wnck-3.0`, `python3-requests`) were already present.
+- It's a hobby project (last commit 2023-10), so it could break after a major update. Then just remove it.
+
+Current look: **2 px, bright green `#5FBF7A`, square corners, just outside the window**.
+
+### Files
+- `~/.local/share/xborder/`: the program (git clone). Update with `git -C ~/.local/share/xborder pull`.
+- `~/.config/xborders/config.json`: settings (below).
+- `~/.config/autostart/xborders.desktop`: starts it 5 s after login (toggle in **Startup Applications**).
+
+### Setup steps (done)
+1. `git clone --depth 1 https://github.com/deter0/xborder.git ~/.local/share/xborder`
+2. Write `~/.config/xborders/config.json`:
+   ```json
+   {
+       "border-rgba": "#5FBF7AFF",
+       "border-radius": 0,
+       "border-width": 2,
+       "border-mode": "outside",
+       "disable-version-warning": true,
+
+       "positive-x-offset": 0,
+       "positive-y-offset": 0,
+       "negative-x-offset": 0,
+       "negative-y-offset": 0
+   }
+   ```
+   `disable-version-warning: true` stops it from contacting GitHub on every start.
+3. Autostart:
+   ```bash
+   cat > ~/.config/autostart/xborders.desktop <<'EOF'
+   [Desktop Entry]
+   Type=Application
+   Name=xborders
+   Comment=Coloured outline on the active window
+   Exec=sh -c "sleep 5 && $HOME/.local/share/xborder/xborders -c $HOME/.config/xborders/config.json"
+   X-GNOME-Autostart-enabled=true
+   EOF
+   ```
+
+### Customizing
+The config is read only at startup, so after editing restart it:
+```bash
+pkill -f xborders; nohup ~/.local/share/xborder/xborders -c ~/.config/xborders/config.json >/dev/null 2>&1 &
+```
+
+| Change | Setting |
+|---|---|
+| Color + opacity | `border-rgba`, `#RRGGBBAA` (e.g. `#5FBF7AAA` = softer; colors tried: `#88C0D0` light blue, `#3E7A52` dark green, `#52A86C` medium green) |
+| Thickness | `border-width` (px) |
+| Rounded corners | `border-radius` (e.g. `6`) |
+| Position | `border-mode`: `outside`, `inside`, `center` |
+| Nudge edges | `positive-/negative-x/y-offset` (px) |
+| Hide when only one window | `"smart-hide-border": true` |
+
+Undo: `pkill -f xborders; rm -r ~/.local/share/xborder ~/.config/xborders ~/.config/autostart/xborders.desktop`
+
 ## To do later
 - [ ] Clean the fan/heatsink and replace thermal paste (CPU hit 97 °C on one busy core, see "Overheating finding")
 - [ ] Install and configure psi-notify (see "Early warning" above)

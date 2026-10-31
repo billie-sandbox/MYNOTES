@@ -175,4 +175,72 @@ hal yang pingin dilakukan:
 - kembali lagi di channel ini
 - tenang video ini isinya bukan beresin ruangan ini ya
 	- d
+
+
+
+- ey berantakan
+- kek uripku :"" hehe
+- harus diberesin ni, ... dua dua nya
+- ey halo rek
+- kembali lagi di channel ini
+- kembali lagi?? km gtau channel apa ini??
+- ya channel ini dah mati pas dah mulai jalan wakwoakoakwok
+- nah ak mau mulai lagi
+- dan akhirnya ak bisa upload video yang pengen tak upload dari lama
+- yaitu adalah...
+- ... vlog - yup...
+- dan tenang, isinya bukan bersihin kamar
+- selamat datang di... // rotate ke calender dan ada title //
+	- BILLIE'S VLOGGG -- BVLOG
+	- ya ak g ahli ngasi nama
+	- tapi tunggu
+	- kalender 2025
+	- yup betull
+	- // rotate ke ak lagi //
+	- ni video dah delay dari taon lalu
+	- dan ak dah pernah buat video update channel, itu ... tahun lalu
+	- tak pasang kalender baru dlu
+	- // rotate ke kalender lagi//
+	- //ganti kalender//
+	- nah udah
+	- dan bahkan, ini bukan awal 2026 lagi
+	- //sobek sobek , sambil kaya memory montage las uplaod//
+	- //transisi sobek kalender//
+	- ini dah akhir 2026 WOI
+	- setebel ini yang udah ak lewatin
+	- jadi vlog tentang apakah ini
+	- yup betuls
+		- ak ngerapihin ini (pikiran) dan semua ini
+		- hope you enjoy
+- jadi, pertama, apa yang sebenernya berantakan
+- well
+- ada buanyak hal yang mau tak lakuin
+- dan hampir semua dah tak lakuin si, dulu ak kebanyakan planning, trus akhirnya ak lakuin semua kaya
+	- kerja freelance it
+	- rutin fotografi
+	- jalanin videografi
+	- jalanin konten sosmed, channel jalan dengan beberapa segmen
+	- ngelakuin review tentang banyak hal
+	- ngedit video
+	- jalanin hobi elektro dan sampe dapet job elektro
+	- ngonten sepedaan
+	- intinya - slow living lah
+- slow living ndasmu
+- slow income yang ada
+- hehe, yaa begitulah
+- ak aja sampe ngejual kameraku
+	- info yang mau beli, ke threads atau instagramku aja
+- akhir akhir ini agak lambat
+- bukannya ak jg g ngapa ngapain
+- sekarang aku juga freelance developer 
+
+
+
+- berangkat kerjain
+- sama viscel
+- g ada anehnya
+- tapi masalahnya...
+- sampe malem , g ada lakuin yang lain
+
+
 - 

@@ -11,6 +11,7 @@ The one place for project ideas. Don't make a new note for an idea — add a lin
 > - **Dropped it?** Move it to *Parked* instead of deleting it.
 
 ## Inbox
+- 2026-10-31 Learn [[CICD]]
 - app android kamera thermal print
 	- 3d printed case for phone for thermal printer attachment or universal type
 	- hybrid, esp32 camera > tmepel hp, tapi agak pointless rasanya

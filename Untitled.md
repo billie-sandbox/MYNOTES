@@ -2,4 +2,5 @@
 2. the stack will be mainly next.js, postgresql with orm (recommend me what to use), maybe i want to use payload cms too (need your input on this). need to have the right skill for these stuff. we need to setup this project properly with the best practice, also with the git best practice.
 3. yes, help me with this too
 4. ok
-5. 
+5. i also plan to use opencode for agent, so i need to set the setting too. 
+6. no need yet. 

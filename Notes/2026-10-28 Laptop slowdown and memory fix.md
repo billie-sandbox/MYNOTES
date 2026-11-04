@@ -287,7 +287,7 @@ cat /proc/acpi/ibm/fan             # ThinkPad fan speed and level
 
 ## Conky resource strip (installed 2026-10-29)
 
-A compact, always-on-top line of system stats attached to the top of the bottom panel, at the bottom-right of the screen:
+A compact, always-on-top line of system stats attached to the top of the bottom panel, at the bottom-middle of the screen:
 
 ```
 CPU 5% 72° · RAM 55% · ZRAM 512K/7.7G · SWAP 0K/6.0G · PSI 0.0% · GPU 5%
@@ -324,7 +324,7 @@ CPU 5% 72° · RAM 55% · ZRAM 512K/7.7G · SWAP 0K/6.0G · PSI 0.0% · GPU 5%
 ### Customizing (`conky.conf`)
 | Change | Setting |
 |---|---|
-| Corner | `alignment` (`bottom_right`, `top_left`, …) |
+| Corner | `alignment` (currently `bottom_middle`; also `bottom_right`, `top_left`, …) |
 | Offset from edge | `gap_x`, `gap_y` (`gap_y = 40` = the panel height, so it sits right on top of it) |
 | Background | `own_window_colour` |
 | Text / warning colors | `default_color`, `color3` (yellow), `color4` (red) |

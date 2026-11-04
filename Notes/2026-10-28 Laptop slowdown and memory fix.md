@@ -287,7 +287,7 @@ cat /proc/acpi/ibm/fan             # ThinkPad fan speed and level
 
 ## Conky resource strip (installed 2026-10-29)
 
-A compact, always-on-top line of system stats attached to the top of the bottom panel, at the bottom-middle of the screen:
+A compact, always-on-top line of system stats at the top middle of the screen (moved there 2026-11-04):
 
 ```
 CPU 5% 72° · RAM 55% · ZRAM 512K/7.7G · SWAP 0K/6.0G · PSI 0.0% · GPU 5%
@@ -295,7 +295,7 @@ CPU 5% 72° · RAM 55% · ZRAM 512K/7.7G · SWAP 0K/6.0G · PSI 0.0% · GPU 5%
 
 - Normal values are grey and turn **yellow/red only when high**, so it doesn't distract.
 - Extra items appear only when needed: the **heaviest process** when RAM ≥ 80%, and **DISK** when ≥ 95% full.
-- The background is solid `#191919`, the same as the panel, so it's readable over any page.
+- The background is the panel color `#191919`, slightly see-through (`own_window_argb_value = 200` of 255), still readable over white pages.
 
 | Item | Meaning | Yellow / red |
 |---|---|---|
@@ -324,9 +324,10 @@ CPU 5% 72° · RAM 55% · ZRAM 512K/7.7G · SWAP 0K/6.0G · PSI 0.0% · GPU 5%
 ### Customizing (`conky.conf`)
 | Change | Setting |
 |---|---|
-| Corner | `alignment` (currently `bottom_middle`; also `bottom_right`, `top_left`, …) |
-| Offset from edge | `gap_x`, `gap_y` (`gap_y = 40` = the panel height, so it sits right on top of it) |
-| Background | `own_window_colour` |
+| Corner | `alignment` (currently `top_middle`; also `bottom_middle`, `bottom_right`, …) |
+| Offset from edge | `gap_x`, `gap_y` (`gap_y = 0` = touching the top edge; at the bottom use `gap_y = 40`, the panel height) |
+| Transparency | `own_window_argb_value` (0 = invisible, 255 = solid; currently 200). Restart Conky after changing it. |
+| Background color | `own_window_colour` |
 | Text / warning colors | `default_color`, `color3` (yellow), `color4` (red) |
 | Font | `font = 'DejaVu Sans Mono:size=8'` |
 | Refresh | `update_interval` (s); helper values refresh every 5 s |

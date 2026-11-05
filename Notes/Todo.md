@@ -9,6 +9,8 @@ The one place for todos that don't have a day yet. When you pick a day, move the
 - [ ] Contact [[nakoaguy]] to ask about work
 	- [ ] tentang kerjaan yang mereka lakuin
 	- [ ] beraniin diri aja
+- [ ] Explore [[Saweria]] for streaming
+	- [ ] Create something for stream that's more interactive
 
 ## Someday
 - [ ] 

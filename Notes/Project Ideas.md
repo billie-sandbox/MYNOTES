@@ -31,5 +31,6 @@ The one place for project ideas. Don't make a new note for an idea — add a lin
 ## Promoted
 Ideas that became their own project notes (see [[Projects]]).
 - personal portofolio [[2026-10-28 personal portofolio]]
+- [[Browser Tools Site]] (local-only helper tools like duplex printing, hosted on my site)
 
 ## Parked

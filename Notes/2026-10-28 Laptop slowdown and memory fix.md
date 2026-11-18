@@ -287,14 +287,18 @@ cat /proc/acpi/ibm/fan             # ThinkPad fan speed and level
 
 ## Conky resource strip (installed 2026-10-29)
 
-A compact, always-on-top line of system stats at the top middle of the screen (moved there 2026-11-04):
+A compact, always-on-top line of system stats at the top of the screen, with the top-apps table beside it; the pair is centered (moved to the top 2026-11-04, table added 2026-11-10):
 
 ```
-CPU 5% 72° · RAM 55% · ZRAM 512K/7.7G · SWAP 0K/6.0G · PSI 0.0% · GPU 5%
+CPU 7% 72° · RAM 37% · ZRAM 2.1G/7.7G · SWAP 0K/6.0G · PSI 0.0% · GPU 9%  APP          │   MEM │  CPU │    DISK
+                                                                         t3code       │  954M │   3% │    0K/s
+                                                                         code         │  1.3G │   2% │   18K/s
+                                                                         firefox      │  3.7G │   1% │    0K/s
 ```
 
 - Normal values are grey and turn **yellow/red only when high**, so it doesn't distract.
 - Extra items appear only when needed: the **heaviest process** when RAM ≥ 80%, and **DISK** when ≥ 95% full.
+- Beside it, as a **separate window** (added 2026-11-10): a table of the **top 3 apps by CPU** with memory, CPU and disk per second. Processes are summed per app, so all Firefox tabs and helpers count as `firefox` and all VS Code processes as `code`. App CPU % is a share of all 8 threads: **12% = one core fully busy** (yellow), red ≥ 50%. Disk = read + write per second; only your own processes are counted. Ties (e.g. all at 0%) are ranked by memory.
 - The background is the panel color `#191919`, slightly see-through (`own_window_argb_value = 200` of 255), still readable over white pages.
 
 | Item | Meaning | Yellow / red |
@@ -309,13 +313,17 @@ CPU 5% 72° · RAM 55% · ZRAM 512K/7.7G · SWAP 0K/6.0G · PSI 0.0% · GPU 5%
 
 ### Files
 - `~/.config/conky/conky.conf`: the compact layout (active). Thresholds are in the comments at the top. Conky reloads when the file is saved.
+- `~/.config/conky/conky-apps.conf`: the top-3 apps table window.
+- Positions meet at the screen center: the strip is `top_right` with `gap_x = 863` (right edge at x 1063, grows to the left when wider), the table is `top_left` with `gap_x = 1073` (left edge at x 1067). Cinnamon shifts these windows about 6 px from the `gap_x`/`gap_y` value, hence the odd numbers. Check real positions with `xwininfo -root -tree | grep -i conky` and `xwininfo -id <id>`.
 - `~/.config/conky/conky-full.conf`: the detailed multi-section layout (CPU per core, graphs, top 5 processes, GPU temp/VRAM, disk, Wi-Fi, batteries). Use it with `conky -c ~/.config/conky/conky-full.conf -d`.
-- `~/.config/conky/stats.sh`: helper script used by both layouts. Modes: `psi`, `zram`, `swap`, `gpu`, `gpu-short`. It sets `LC_ALL=C` so decimals use `.` regardless of locale.
-- `~/.config/autostart/conky.desktop`: starts Conky 10 s after login (toggle it in **Startup Applications**).
+- `~/.config/conky/stats.sh`: helper script used by both layouts. Modes: `psi`, `zram`, `swap`, `gpu`, `gpu-short`, `apps` (top-3 apps table; keeps the previous sample in `$XDG_RUNTIME_DIR/conky-apps.state` to compute CPU and disk rates). It sets `LC_ALL=C` so decimals use `.` regardless of locale.
+- `~/.config/autostart/conky.desktop`: starts both windows (strip, then apps table) 10 s after login (toggle it in **Startup Applications**).
 
 ### Setup steps (done)
 1. Install in a normal terminal (`sudo` can't ask for a password through Claude Code's `!`): `sudo apt install conky-all`
 2. Start: `conky -c ~/.config/conky/conky.conf -d`. Stop: `pkill conky`
+   - Conky 1.19 reloads the config when it's saved, but it can **crash during that reload** (happened 2026-11-10). If the strip disappears after an edit, start it again with the command above.
+   - If a Conky window shows up in **Alt+Tab** or gets **covered by other apps**, it lost its window flags (seen 2026-11-10 after a restart). Check with `xprop -id <id> _NET_WM_STATE`: it should list `SKIP_PAGER, SKIP_TASKBAR, ABOVE, STICKY`. Fix: `pkill -x conky`, then start both configs again.
 3. Autostart:
    ```bash
    printf '[Desktop Entry]\nType=Application\nName=Conky\nExec=sh -c "sleep 10 && conky -c %s/.config/conky/conky.conf -d"\nX-GNOME-Autostart-enabled=true\n' "$HOME" > ~/.config/autostart/conky.desktop

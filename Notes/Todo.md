@@ -11,6 +11,9 @@ The one place for todos that don't have a day yet. When you pick a day, move the
 	- [ ] beraniin diri aja
 - [ ] Explore [[Saweria]] for streaming
 	- [ ] Create something for stream that's more interactive
+- [ ] Pinjam laptop Viscel
+- [ ] Setup laptop Viscel
+- [ ] Lamar Slide 24
 
 ## Someday
 - [ ] 

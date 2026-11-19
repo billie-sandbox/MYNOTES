@@ -1,1 +1,5 @@
 found something, when editing category, marking delete the attribute should also be striked, and it should not appear agian in the dropdown.
+
+
+redesign
+

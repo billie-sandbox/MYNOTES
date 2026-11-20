@@ -30,4 +30,8 @@ in attribute creation of dropdown type:
 - notes:
 	- when in narrow screen, the two col setup naturally become stacked.
 
-this design in creation, can be also be the same with in edit attribute 
+its ok the size of dialog become bigger (find similar implementation where the dialog is bigger, consult to me your finding first)
+
+this design in creation, can be also be the same with in edit dialog too. in edit mode, it contain 2 tab, one for the name, and for the dropdown setup its on the other tab. this can be replacement for the dedicated options management page. 
+
+lets do this redesign on attribute first, and remember to implement the needed validation. when you build it, on every place we work on, list your applied validation and guard client and server side

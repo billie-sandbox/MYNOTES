@@ -3,4 +3,4 @@ found something, when editing category, marking delete the attribute should also
 
 redesign
 
-so here is the redesign about the flow etc with the bug fix we just talk about. i think we need a unified ui for the dropdown management stuff. lets begin with the attribute. 
+so here is the redesign about the flow etc with the bug fix we just talk about. i think we need a unified ui for the dropdown management stuff. lets begin with the attribute. d

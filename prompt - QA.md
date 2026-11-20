@@ -46,3 +46,12 @@ gap:
 	- suppose to happen: the option moved to no group group. 
 addition:
 - we should add detail action button on the list of attribue to see the detail of the data (only need read access i think), inside the modal for detail there are also a button for delete and edit (properly gated)
+
+after the fix:
+findings:
+- please follow the convention in this system for the button usage in the strip at the detail dialog.
+- for the detail dialog, please be clear about the sections, like the options detail, dont just suddenly showing the options list, it needs like a section title and brief short description.
+
+adjustment:
+- for the detail page options list, im ok with the pill, but also separate the group like in the create or edit page, like inside its each container.
+- for all the dialog we touch, i want the button inside it is a with icon button, not only label. (see system convention)

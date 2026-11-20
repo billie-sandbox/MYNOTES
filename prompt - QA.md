@@ -35,3 +35,14 @@ its ok the size of dialog become bigger (find similar implementation where the d
 this design in creation, can be also be the same with in edit dialog too. in edit mode, it contain 2 tab, one for the name, and for the dropdown setup its on the other tab. this can be replacement for the dedicated options management page. 
 
 lets do this redesign on attribute first, and remember to implement the needed validation. when you build it, on every place we work on, list your applied validation and guard client and server side
+
+
+adjustment:
+- for the inline editing, provide a save button, maybe save change or a check button and also a cancel button, placed bellow the edit fields, this is for both the group edit and also options edit.
+- group shown order are following ascending.
+- the edit tab, not suppose to be at the side, but on top
+gap:
+- adding option to a group, and deleting that group will also make the option inside it dissapear. 
+	- suppose to happen: the option moved to no group group. 
+addition:
+- we should add detail action button on the list of attribue to see the detail of the data (only need read access i think), inside the modal for detail there are also a button for delete and edit (properly gated)

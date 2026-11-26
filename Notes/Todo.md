@@ -14,6 +14,7 @@ The one place for todos that don't have a day yet. When you pick a day, move the
 - [ ] Pinjam laptop Viscel
 - [ ] Setup laptop Viscel
 - [ ] Lamar Slide 24
+- [ ] Decide on Windows Subsystem for Android (`vmmemWSA`, ~470 MB RAM): turn it off in its settings if unused
 
 ## Someday
 - [ ] 

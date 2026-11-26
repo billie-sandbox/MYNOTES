@@ -11,6 +11,10 @@ created: 2026-10-26
 publish:
 url:
 ---
+## Tagline
+
+- "bocah kebanyakan ide"
+
 ## intro
 
 - //scene// kompilasi sepedaan sendiri (buat pendek)
